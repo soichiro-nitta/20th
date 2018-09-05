@@ -10,13 +10,32 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'icon', href: '/icon.png' },
+      // { rel: 'apple-touch-icon', href: '/icon.png' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,700'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css'
+      }
     ]
   },
+  css: ['~/assets/scss/default.scss'],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  /*
+  ** nuxt-modules
+  */
+  modules: [
+    // '@nuxtjs/axios',
+    // '@nuxtjs/pwa',
+    'nuxt-device-detect',
+    ['nuxt-sass-resources-loader', ['~/assets/scss/variable.scss']]
+  ],
   /*
   ** Build configuration
   */
@@ -24,7 +43,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -36,4 +55,3 @@ module.exports = {
     }
   }
 }
-
