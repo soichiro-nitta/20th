@@ -64,8 +64,6 @@ export default {
     font-size: 16px;
     color: #666;
     font-family: 'Share', cursive;
-    // font-family: 'Forum', cursive;
-    // font-weight: bold;
   }
 }
 </style>

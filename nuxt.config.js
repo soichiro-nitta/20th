@@ -24,8 +24,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Cinzel+Decorative|Forum|Share'
+        href: 'https://fonts.googleapis.com/css?family=Share'
       }
     ]
   },

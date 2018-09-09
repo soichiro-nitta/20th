@@ -300,12 +300,13 @@ export default {
 
     font-weight: bold;
     color: #eee;
-    font-size: 16vw;
+    font-size: 15vw;
     font-weight: bold;
     filter: blur(50px);
     opacity: 0;
     transform: scale(0.9);
-    line-height: 1.2;
+    line-height: 1.1;
+    letter-spacing: 0;
   }
   #canvas {
     position: absolute;
