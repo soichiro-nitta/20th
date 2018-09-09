@@ -288,23 +288,24 @@ export default {
     // font-family: 'Permanent Marker', cursive;
     // font-family: 'Press Start 2P', cursive;
     // font-family: 'Squada One', cursive;
-    // font-family: 'Rock Salt', cursive;
     // font-family: 'Fredericka the Great', cursive;
-    // font-family: 'Averia Serif Libre', cursive;
     // font-family: 'Kelly Slab', cursive;
-    font-family: 'Share Tech Mono', monospace;
     // font-family: 'Fontdiner Swanky', cursive;
     // font-family: 'Zilla Slab Highlight', cursive;
     // font-family: 'Londrina Sketch', cursive;
     // font-family: 'Kumar One Outline', cursive;
 
+    font-family: 'Averia Serif Libre', cursive;
+    // font-family: 'Rock Salt', cursive;
+
     font-weight: bold;
     color: #eee;
-    font-size: 16vw;
+    font-size: 18vw;
     font-weight: bold;
     filter: blur(50px);
     opacity: 0;
     transform: scale(0.9);
+    line-height: 1.2;
   }
   #canvas {
     position: absolute;
