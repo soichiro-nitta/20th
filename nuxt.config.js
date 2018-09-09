@@ -19,6 +19,15 @@ module.exports = {
       {
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Serif+JP'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Special+Elite|Shadows+Into+Light'
       }
     ]
   },
@@ -40,6 +49,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['gsap'],
     /*
     ** Run ESLint on save
     */

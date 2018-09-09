@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     This is index.vue<br>
-    これはトップページです
+    これはトップページです。
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="default">
-    <!-- <TheBackground/> -->
+    <TheBackground/>
     <div id="scrollArea">
       <nuxt/>
       <!-- <nuxt v-if="opening"/> -->
@@ -12,13 +12,13 @@
 
 <script>
 // import { mapGetters } from 'vuex'
-// import TheBackground from '~/components/TheBackground'
+import TheBackground from '~/components/TheBackground'
 // import TheNav from '~/components/TheNav'
 // import TheOpening from '~/components/TheOpening'
 
 export default {
   components: {
-    // TheBackground,
+    TheBackground
     // TheNav,
     // TheOpening
   },
