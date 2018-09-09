@@ -23,7 +23,10 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: {
+    color: '#333',
+    height: '10px'
+  },
   /*
   ** nuxt-modules
   */
