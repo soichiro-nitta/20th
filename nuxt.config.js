@@ -15,16 +15,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Fontdiner+Swanky|Fredericka+the+Great|Kelly+Slab|Kosugi+Maru|Kumar+One+Outline|Londrina+Sketch|Permanent+Marker|Press+Start+2P|Rock+Salt|Share+Tech+Mono|Squada+One|Zilla+Slab+Highlight'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Special+Elite|Shadows+Into+Light'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Share'
+          'https://fonts.googleapis.com/css?family=Share|Averia+Serif+Libre|Shadows+Into+Light|M+PLUS+Rounded+1c'
       }
     ]
   },

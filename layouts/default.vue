@@ -5,7 +5,7 @@
       <nuxt/>
       <!-- <nuxt v-if="opening"/> -->
     </div>
-    <!-- <TheNav/> -->
+    <TheNavigation/>
     <!-- <TheOpening/> -->
   </div>
 </template>
@@ -13,13 +13,13 @@
 <script>
 // import { mapGetters } from 'vuex'
 import TheBackground from '~/components/TheBackground'
-// import TheNav from '~/components/TheNav'
+import TheNavigation from '~/components/TheNavigation'
 // import TheOpening from '~/components/TheOpening'
 
 export default {
   components: {
-    TheBackground
-    // TheNav,
+    TheBackground,
+    TheNavigation
     // TheOpening
   },
   computed: {
