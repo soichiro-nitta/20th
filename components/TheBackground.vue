@@ -283,9 +283,25 @@ export default {
     bottom: 0;
     left: 0;
     margin: 0 auto;
-    font-family: 'Special Elite', cursive;
+    // font-family: 'Cinzel Decorative', cursive;
+    // font-family: 'Kosugi Maru', sans-serif;
+    // font-family: 'Permanent Marker', cursive;
+    // font-family: 'Press Start 2P', cursive;
+    // font-family: 'Squada One', cursive;
+    // font-family: 'Rock Salt', cursive;
+    // font-family: 'Fredericka the Great', cursive;
+    // font-family: 'Averia Serif Libre', cursive;
+    // font-family: 'Kelly Slab', cursive;
+    font-family: 'Share Tech Mono', monospace;
+    // font-family: 'Fontdiner Swanky', cursive;
+    // font-family: 'Zilla Slab Highlight', cursive;
+    // font-family: 'Londrina Sketch', cursive;
+    // font-family: 'Kumar One Outline', cursive;
+
+    font-weight: bold;
     color: #eee;
-    font-size: 15vw;
+    font-size: 16vw;
+    font-weight: bold;
     filter: blur(50px);
     opacity: 0;
     transform: scale(0.9);

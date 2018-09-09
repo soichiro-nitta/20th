@@ -14,20 +14,18 @@ module.exports = {
       // { rel: 'apple-touch-icon', href: '/icon.png' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,700'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/earlyaccess/notosansjapanese.css'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Noto+Serif+JP'
+        href:
+          'https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Fontdiner+Swanky|Fredericka+the+Great|Kelly+Slab|Kosugi+Maru|Kumar+One+Outline|Londrina+Sketch|Permanent+Marker|Press+Start+2P|Rock+Salt|Share+Tech+Mono|Squada+One|Zilla+Slab+Highlight'
       },
       {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css?family=Special+Elite|Shadows+Into+Light'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Cinzel+Decorative|Forum|Share'
       }
     ]
   },
