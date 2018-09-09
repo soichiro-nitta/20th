@@ -300,7 +300,7 @@ export default {
 
     font-weight: bold;
     color: #eee;
-    font-size: 18vw;
+    font-size: 16vw;
     font-weight: bold;
     filter: blur(50px);
     opacity: 0;
