@@ -42,8 +42,6 @@ export default {
     margin-top: 60px;
     font-size: 14px;
     font-family: 'Share', cursive;
-    // font-family: 'Forum', cursive;
-    font-family: 'Cinzel Decorative', cursive;
     font-weight: bold;
     &::before,
     &::after {
