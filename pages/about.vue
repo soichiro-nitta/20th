@@ -19,6 +19,9 @@ import BaseHeading1 from '~/components/BaseHeading1.vue'
 export default {
   components: {
     BaseHeading1
+  },
+  mounted() {
+    document.getElementById('scrollArea').scrollTop = 0
   }
 }
 </script>
