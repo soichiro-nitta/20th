@@ -1,14 +1,14 @@
 <template>
   <div class="index">
     <BaseHeading1 text="Home."/>
-    <video
+    <!-- <video
       ref="video"
       src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
       controls
       preload="auto"
       autoplay
       playsinline
-    />
+    /> -->
     <div class="text">
       OP後はこのページにきて、ボタン押して動画再生?
     </div>
