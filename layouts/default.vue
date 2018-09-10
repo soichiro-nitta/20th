@@ -52,6 +52,7 @@ export default {
   width: calc(100% - 20px);
   height: calc(100% - 20px);
   overflow: hidden;
+  background: #fefefe;
   #scrollArea {
     position: relative;
     width: 100%;

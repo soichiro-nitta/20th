@@ -28,7 +28,7 @@ export default {
   h1 {
     font-family: 'Shadows Into Light', cursive;
     width: 100%;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 1;
   }
@@ -39,7 +39,7 @@ export default {
     align-content: center;
     flex: 1 1 auto;
     position: relative;
-    margin-top: 70px;
+    margin-top: 60px;
     font-size: 14px;
     font-family: 'Share', cursive;
     font-weight: bold;
@@ -60,9 +60,8 @@ export default {
     }
   }
   .name {
-    margin-top: 40px;
-    font-size: 16px;
-    color: #666;
+    margin-top: 60px;
+    font-size: 18px;
     font-family: 'Share', cursive;
   }
 }

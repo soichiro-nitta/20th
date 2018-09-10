@@ -24,7 +24,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: {
-    color: '#333',
+    color: '#999',
     height: '10px'
   },
   /*
@@ -36,6 +36,10 @@ module.exports = {
     'nuxt-device-detect',
     ['nuxt-sass-resources-loader', ['~/assets/scss/variable.scss']]
   ],
+  /*
+  ** Plugins
+  */
+  plugins: ['~/plugins/mixin'],
   /*
   ** Build configuration
   */

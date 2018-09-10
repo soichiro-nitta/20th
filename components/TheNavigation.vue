@@ -1,79 +1,252 @@
 <template>
   <div class="TheNavigation">
-    <!-- <div class="menu">
-      <nuxt-link to="/">
+    <div
+      ref="menu"
+      class="menu"
+    />
+    <div
+      ref="list"
+      class="list"
+    >
+      <nuxt-link
+        to="/"
+        @click.native="close"
+      >
         Home.
       </nuxt-link>
-      <nuxt-link to="/about">
+      <nuxt-link
+        to="/about"
+        @click.native="close"
+      >
         About.
       </nuxt-link>
-      <nuxt-link to="/credits">
+
+      <nuxt-link
+        to="/credits"
+        @click.native="close"
+      >
         Credits.
       </nuxt-link>
-    </div> -->
-    <div class="switch">
-      <div class="border1"/>
-      <div class="border2"/>
-      <div class="border3"/>
+    </div>
+    <div
+      class="switch"
+      @click="toggle"
+    >
+      <div
+        ref="border1"
+        class="border1"
+      />
+      <div
+        ref="border2"
+        class="border2"
+      />
+      <div
+        ref="border3"
+        class="border3"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { TweenMax, Expo } from 'gsap'
+
+export default {
+  data() {
+    return {
+      opened: false,
+      progress: false
+    }
+  },
+  methods: {
+    toggle() {
+      !this.opened ? this.open() : this.close()
+    },
+    async open() {
+      if (this.progress) return
+      console.log(this.progress)
+      this.progress = true
+      console.log('enter')
+      this.enterMenu()
+      this.enterSwitch()
+      await this.$delay(700)
+      this.opened = true
+      this.progress = false
+    },
+    async close() {
+      if (this.progress) return
+      console.log(this.progress)
+      this.progress = true
+      console.log('lreave')
+      this.leaveMenu()
+      this.leaveSwitch()
+      await this.$delay(700)
+      this.progress = false
+      this.$refs.menu.style.display = 'none'
+      this.$refs.list.style.display = 'none'
+      this.opened = false
+    },
+    enterMenu() {
+      this.$refs.menu.style.display = 'block'
+      this.$refs.list.style.display = 'flex'
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.menu, 0.7, {
+          filter: 'blur(0px)',
+          opacity: 0.9,
+          ease: Expo.easeOut
+        })
+        TweenMax.staggerTo(
+          '.list a',
+          1,
+          {
+            x: 0,
+            filter: 'blur(0px)',
+            opacity: 1,
+            ease: Expo.easeOut
+          },
+          0.1
+        )
+      })
+    },
+    enterSwitch() {
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.border2, 0.7, {
+          filter: 'blur(50px)',
+          opacity: 0,
+          ease: Expo.easeOut
+        })
+        TweenMax.to(this.$refs.border1, 0.7, {
+          y: '7px',
+          scaleX: 1.5,
+          rotation: '405deg',
+          ease: Expo.easeOut
+        })
+        TweenMax.to(this.$refs.border3, 0.7, {
+          y: '-7px',
+          scaleX: 1.5,
+          rotation: '-405deg',
+          ease: Expo.easeOut
+        })
+      })
+    },
+    leaveMenu() {
+      requestAnimationFrame(() => {
+        TweenMax.staggerTo(
+          '.list a',
+          1,
+          {
+            x: '-50px',
+            filter: 'blur(50px)',
+            opacity: 0,
+            ease: Expo.easeInOut
+          },
+          0.1
+        )
+        TweenMax.to(this.$refs.menu, 0.7, {
+          filter: 'blur(50px)',
+          opacity: 0,
+          ease: Expo.easeInOut
+        })
+      })
+    },
+    leaveSwitch() {
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.border2, 0.7, {
+          filter: 'blur(0px)',
+          opacity: 1,
+          ease: Expo.easeInOut
+        })
+        TweenMax.to(this.$refs.border1, 0.7, {
+          y: 0,
+          scaleX: 1,
+          rotation: 0,
+          ease: Expo.easeInOut
+        })
+        TweenMax.to(this.$refs.border3, 0.7, {
+          y: 0,
+          scaleX: 1,
+          rotation: 0,
+          ease: Expo.easeInOut
+        })
+      })
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
 .TheNavigation {
   .menu {
-    display: flex;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 0;
+    bottom: 0;
+    left: 10px;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: #fefefe;
+    filter: blur(50px);
+    opacity: 0;
+  }
+  .list {
+    display: none;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     margin: 0 auto;
-    // background: white;
+    width: 100%;
+    height: 100%;
     a {
       display: block;
       margin: 40px 0;
+      color: #333;
       font-family: 'Shadows Into Light', cursive;
       font-size: 10vw;
       font-weight: bold;
       line-height: 1;
+      transform: translateX(-50px);
+      filter: blur(50px);
+      opacity: 0;
     }
   }
   .switch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 17.5px;
+    right: 17.5px;
     padding: 0 17px;
     width: 50px;
     height: 50px;
-    background: #efefef;
+    background: #eee;
     border-radius: 50%;
     overflow: hidden;
     .border1,
     .border2,
     .border3 {
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: auto;
       height: 1px;
       background: #333;
     }
     .border1 {
-      width: 50%;
+      top: 17.5px;
+      width: 8.2px;
     }
     .border2 {
-      width: 75%;
-      margin: 6px auto;
+      top: 24.5px;
+      width: 12px;
     }
     .border3 {
-      width: 50%;
+      top: 31.5px;
+      width: 8.2px;
     }
   }
 }

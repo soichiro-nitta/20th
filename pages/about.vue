@@ -28,7 +28,7 @@ export default {
   h1 {
     font-family: 'Shadows Into Light', cursive;
     width: 100%;
-    font-size: 70px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 1;
     text-align: center;

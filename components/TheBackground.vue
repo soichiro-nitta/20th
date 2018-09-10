@@ -68,7 +68,7 @@ export default {
           // frames per second
           this.fps = 60
           // number of particles
-          this.numParticles = isMobile ? 60 : 120
+          this.numParticles = isMobile ? 90 : 120
           // required canvas variables
           this.canvas = document.getElementById('canvas')
           this.ctx = this.canvas.getContext('2d')
@@ -285,7 +285,7 @@ export default {
     margin: 0 auto;
     font-family: 'Averia Serif Libre', cursive;
     font-weight: bold;
-    color: #e5e5e5;
+    color: #eee;
     font-size: 16vw;
     font-weight: bold;
     filter: blur(50px);
