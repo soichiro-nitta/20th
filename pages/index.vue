@@ -6,8 +6,8 @@
       src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
       controls
       preload="auto"
+      autoplay
       playsinline
-      loop
     />
     <div class="text">
       OP後はこのページにきて、ボタン押して動画再生?
