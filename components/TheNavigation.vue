@@ -54,8 +54,8 @@ import { TweenMax, Expo } from 'gsap'
 export default {
   data() {
     return {
-      opened: false,
-      progress: false
+      opened: false
+      // progress: false
     }
   },
   methods: {
@@ -63,32 +63,28 @@ export default {
       !this.opened ? this.open() : this.close()
     },
     async open() {
-      if (this.progress) return
-      console.log(this.progress)
-      this.progress = true
-      console.log('enter')
+      // if (this.progress) return
+      // this.progress = true
+      this.$refs.menu.style.display = 'block'
+      this.$refs.list.style.display = 'flex'
       this.enterMenu()
       this.enterSwitch()
       await this.$delay(700)
       this.opened = true
-      this.progress = false
+      // this.progress = false
     },
     async close() {
-      if (this.progress) return
-      console.log(this.progress)
-      this.progress = true
-      console.log('lreave')
+      // if (this.progress) return
+      // this.progress = true
       this.leaveMenu()
       this.leaveSwitch()
       await this.$delay(700)
-      this.progress = false
+      // this.progress = false
       this.$refs.menu.style.display = 'none'
       this.$refs.list.style.display = 'none'
       this.opened = false
     },
     enterMenu() {
-      this.$refs.menu.style.display = 'block'
-      this.$refs.list.style.display = 'flex'
       requestAnimationFrame(() => {
         TweenMax.to(this.$refs.menu, 0.7, {
           filter: 'blur(0px)',
@@ -97,14 +93,14 @@ export default {
         })
         TweenMax.staggerTo(
           '.list a',
-          1,
+          1.2,
           {
             x: 0,
             filter: 'blur(0px)',
             opacity: 1,
             ease: Expo.easeOut
           },
-          0.1
+          0.12
         )
       })
     },
@@ -133,16 +129,16 @@ export default {
       requestAnimationFrame(() => {
         TweenMax.staggerTo(
           '.list a',
-          1,
+          0.8,
           {
-            x: '-50px',
+            x: '-60px',
             filter: 'blur(50px)',
             opacity: 0,
             ease: Expo.easeInOut
           },
-          0.1
+          0.08
         )
-        TweenMax.to(this.$refs.menu, 0.7, {
+        TweenMax.to(this.$refs.menu, 0.5, {
           filter: 'blur(50px)',
           opacity: 0,
           ease: Expo.easeInOut
@@ -151,18 +147,18 @@ export default {
     },
     leaveSwitch() {
       requestAnimationFrame(() => {
-        TweenMax.to(this.$refs.border2, 0.7, {
+        TweenMax.to(this.$refs.border2, 0.5, {
           filter: 'blur(0px)',
           opacity: 1,
           ease: Expo.easeInOut
         })
-        TweenMax.to(this.$refs.border1, 0.7, {
+        TweenMax.to(this.$refs.border1, 0.5, {
           y: 0,
           scaleX: 1,
           rotation: 0,
           ease: Expo.easeInOut
         })
-        TweenMax.to(this.$refs.border3, 0.7, {
+        TweenMax.to(this.$refs.border3, 0.5, {
           y: 0,
           scaleX: 1,
           rotation: 0,
@@ -211,7 +207,7 @@ export default {
       font-size: 10vw;
       font-weight: bold;
       line-height: 1;
-      transform: translateX(-50px);
+      transform: translateX(-60px);
       filter: blur(50px);
       opacity: 0;
     }
