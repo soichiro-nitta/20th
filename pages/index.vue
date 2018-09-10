@@ -1,17 +1,17 @@
 <template>
   <div class="index">
-    <h1>Home.</h1>
+    <BaseHeading1 text="Home."/>
     <div class="text">
       OP後はこのページにきて、ボタン押して動画再生?
     </div>
 </div></template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
   components: {
-    AppLogo
+    BaseHeading1
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="credits">
-    <h1>Credits.</h1>
+    <BaseHeading1 text="Credits."/>
     <h2>Movie</h2>
     <div class="name">Kensuke Ohki</div>
     <h2>Website</h2>
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
   components: {
-    AppLogo
+    BaseHeading1
   }
 }
 </script>

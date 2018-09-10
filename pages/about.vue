@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>About.</h1>
+    <BaseHeading1 text="About."/>
     <div class="text">
       本作の主人公は普遍的な愛についての課題を抱え、そしてそれは最後まで上手くいくことがありません。世の中において、何かを頑張ったから何かが報われる、というのは幻想に過ぎず、どうにもならないことは確実に存在しています。私たちはその理不尽や矛盾から生まれる嫉妬や憎悪、悲哀、そういった誰しもがうちに秘める感情を、否定することなくそのまま受け入れたいと考えました。
       <br><br>
@@ -14,11 +14,11 @@
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
   components: {
-    AppLogo
+    BaseHeading1
   }
 }
 </script>
