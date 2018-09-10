@@ -202,7 +202,7 @@ export default {
     a {
       display: block;
       margin: 40px 0;
-      color: #333;
+      color: #555;
       font-family: 'Shadows Into Light', cursive;
       font-size: 10vw;
       font-weight: bold;
@@ -230,7 +230,7 @@ export default {
       left: 0;
       margin: auto;
       height: 1px;
-      background: #333;
+      background: #555;
     }
     .border1 {
       top: 17.5px;

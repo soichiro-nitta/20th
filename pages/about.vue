@@ -24,7 +24,7 @@ export default {
   padding: 60px 20px;
   width: 100%;
   height: 100%;
-  color: #333;
+  color: #555;
   h1 {
     font-family: 'Shadows Into Light', cursive;
     width: 100%;
