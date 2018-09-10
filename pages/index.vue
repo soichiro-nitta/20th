@@ -4,7 +4,8 @@
     <div class="text">
       OP後はこのページにきて、ボタン押して動画再生?
     </div>
-</div></template>
+  </div>
+</template>
 
 <script>
 import BaseHeading1 from '~/components/BaseHeading1.vue'
