@@ -283,10 +283,9 @@ export default {
     bottom: 0;
     left: 0;
     margin: 0 auto;
-    // font-family: 'Press Start 2P', cursive;
     font-family: 'Averia Serif Libre', cursive;
     font-weight: bold;
-    color: #efefef;
+    color: #e5e5e5;
     font-size: 16vw;
     font-weight: bold;
     filter: blur(50px);
