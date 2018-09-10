@@ -1,6 +1,14 @@
 <template>
   <div class="index">
     <BaseHeading1 text="Home."/>
+    <video
+      ref="video"
+      src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
+      controls
+      preload="auto"
+      playsinline
+      loop
+    />
     <div class="text">
       OP後はこのページにきて、ボタン押して動画再生?
     </div>
@@ -26,12 +34,10 @@ export default {
   width: 100%;
   color: #555;
   text-align: center;
-  h1 {
-    font-family: 'Shadows Into Light', cursive;
+  video {
+    margin-top: 50px;
     width: 100%;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 1;
+    height: auto;
   }
   .text {
     margin-top: 50px;
