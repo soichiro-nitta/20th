@@ -15,14 +15,12 @@
       <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
     </video> -->
     <video
-      id="js-movie"
       ref="video"
-      poster="https://wheelchair-dance.com/m/assets/img/poster.jpg"
-      autobuffer=""
-      controls=""
-      preload="true"
+      poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
+      controls
+      preload="auto"
     >
-      <source src="https://player.vimeo.com/external/205355004.hd.mp4?s=957c15faa666e063b0ecc65c49cb1abf069ee323&amp;profile_id=119">
+      <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
     </video>
     <!-- <video
       ref="video"
