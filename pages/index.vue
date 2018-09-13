@@ -54,8 +54,19 @@ export default {
   components: {
     BaseHeading1
   },
-  mounted() {
+  async mounted() {
     document.getElementById('scrollArea').scrollTop = 0
+    this.$refs.video.addEventListener('pause', async () => {
+      requestAnimationFrame(async () => {
+        TweenMax.to(this.$refs.video, 1, {
+          scale: 0,
+          opacity: 0,
+          ease: Expo.easeOut
+        })
+        await this.$delay(1000)
+        this.$refs.container.style.display = 'none'
+      })
+    })
   },
   methods: {
     click() {
@@ -63,7 +74,8 @@ export default {
       this.$refs.video.play()
       this.$refs.container.style.display = 'flex'
       requestAnimationFrame(() => {
-        TweenMax.to(this.$refs.container, 1, {
+        TweenMax.to(this.$refs.video, 1, {
+          scale: 1,
           opacity: 1,
           ease: Expo.easeOut
         })
@@ -102,10 +114,12 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
+    overflow: hidden;
     video {
       width: 100%;
       height: auto;
+      opacity: 0;
+      transform: scale(0);
     }
   }
   .text {
