@@ -11,14 +11,6 @@
     >
       <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
     </video> -->
-    <video
-      ref="video"
-      poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
-      controls
-      preload="auto"
-    >
-      <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
-    </video>
     <!-- <video
       ref="video"
       poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
@@ -32,10 +24,30 @@
       controls
     /> -->
     <div class="text">OP後はこのページにきて、ボタン押して動画再生?</div>
+    <div
+      ref="container"
+      class="container"
+    >
+      <video
+        ref="video"
+        poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
+        controls
+        preload="auto"
+      >
+        <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
+      </video>
+    </div>
+    <div
+      class="launch"
+      @click="click"
+    >
+      Launch The Film
+    </div>
   </div>
 </template>
 
 <script>
+import { TweenMax, Expo } from 'gsap'
 import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
@@ -44,13 +56,19 @@ export default {
   },
   mounted() {
     document.getElementById('scrollArea').scrollTop = 0
-    console.log('index mounted')
-    // this.$refs.video.addEventListener('progress', () => {
-    //   console.log('event')
-    //   console.log(this.$refs.video.buffered.end(0))
-    //   // console.log(this.$refs.video.duration * 100)
-    // })
-    // this.$refs.video.load()
+  },
+  methods: {
+    click() {
+      console.log(this.$refs.video)
+      this.$refs.video.play()
+      this.$refs.container.style.display = 'flex'
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.container, 1, {
+          opacity: 1,
+          ease: Expo.easeOut
+        })
+      })
+    }
   }
 }
 </script>
@@ -62,10 +80,33 @@ export default {
   color: #555;
   text-align: center;
   overflow: hidden;
-  video {
-    margin-top: 50px;
+  .launch {
+    margin: 50px auto 0;
+    width: 60%;
+    text-align: center;
+    background: #eee;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Share', cursive;
+    border-radius: 50px;
+  }
+  .container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    opacity: 0;
+    video {
+      width: 100%;
+      height: auto;
+    }
   }
   .text {
     margin-top: 50px;
