@@ -22,22 +22,49 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.index {
+.credits {
   padding: 60px 20px;
   width: 100%;
   color: #555;
   text-align: center;
-  video {
-    margin-top: 50px;
+  h1 {
+    font-family: 'Shadows Into Light', cursive;
     width: 100%;
-    height: auto;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
   }
-  .text {
-    margin-top: 50px;
-    color: #555;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 2;
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1 1 auto;
+    position: relative;
+    margin-top: 60px;
+    font-size: 14px;
+    font-family: 'Share', cursive;
+    font-weight: bold;
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      flex: 1 1 auto;
+      height: 1px;
+      position: relative;
+      background: #555;
+    }
+    &::before {
+      margin-right: 15px;
+    }
+    &::after {
+      margin-left: 15px;
+    }
+  }
+  .name {
+    margin-top: 60px;
+    font-size: 18px;
+    font-family: 'Share', cursive;
   }
 }
 </style>
