@@ -1,10 +1,15 @@
 <template>
-  <div class="credits">
-    <BaseHeading1 text="Credits."/>
-    <h2>Movie</h2>
-    <div class="name">Kensuke Ohki</div>
-    <h2>Website</h2>
-    <div class="name">Soichiro Nitta</div>
+  <div class="index">
+    <BaseHeading1 text="Home."/>
+    <!-- <video
+      ref="video"
+      src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
+      controls
+      preload="auto"
+      autoplay
+      playsinline
+    /> -->
+    <div class="text">OP後はこのページにきて、ボタン押して動画再生?</div>
   </div>
 </template>
 
@@ -22,49 +27,22 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.credits {
+.index {
   padding: 60px 20px;
   width: 100%;
   color: #555;
   text-align: center;
-  h1 {
-    font-family: 'Shadows Into Light', cursive;
+  video {
+    margin-top: 50px;
     width: 100%;
-    font-size: 50px;
-    font-weight: bold;
-    line-height: 1;
+    height: auto;
   }
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex: 1 1 auto;
-    position: relative;
-    margin-top: 60px;
-    font-size: 14px;
-    font-family: 'Share', cursive;
-    font-weight: bold;
-    &::before,
-    &::after {
-      content: '';
-      display: inline-block;
-      flex: 1 1 auto;
-      height: 1px;
-      position: relative;
-      background: #555;
-    }
-    &::before {
-      margin-right: 15px;
-    }
-    &::after {
-      margin-left: 15px;
-    }
-  }
-  .name {
-    margin-top: 60px;
-    font-size: 18px;
-    font-family: 'Share', cursive;
+  .text {
+    margin-top: 50px;
+    color: #555;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 2;
   }
 }
 </style>
