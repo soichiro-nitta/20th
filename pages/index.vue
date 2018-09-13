@@ -1,17 +1,10 @@
 <template>
-  <div class="index">
-    <BaseHeading1 text="Home."/>
-    <!-- <video
-      ref="video"
-      src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
-      controls
-      preload="auto"
-      autoplay
-      playsinline
-    /> -->
-    <div class="text">
-      OP後はこのページにきて、ボタン押して動画再生?
-    </div>
+  <div class="credits">
+    <BaseHeading1 text="Credits."/>
+    <h2>Movie</h2>
+    <div class="name">Kensuke Ohki</div>
+    <h2>Website</h2>
+    <div class="name">Soichiro Nitta</div>
   </div>
 </template>
 
