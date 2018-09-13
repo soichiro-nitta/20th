@@ -1,9 +1,6 @@
 <template>
   <div class="index">
     <BaseHeading1 text="Home."/>
-    <a href="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
-      this is video link?
-    </a>
     <!-- <video
       crossorigin="anonymous"
       preload="auto"
