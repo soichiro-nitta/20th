@@ -28,6 +28,11 @@
       ref="container"
       class="container"
     >
+      <div
+        ref="layer"
+        class="layer"
+        @click="close"
+      />
       <video
         ref="video"
         poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
@@ -39,7 +44,7 @@
     </div>
     <div
       class="launch"
-      @click="click"
+      @click="launch"
     >
       Launch The Film
     </div>
@@ -56,29 +61,44 @@ export default {
   },
   async mounted() {
     document.getElementById('scrollArea').scrollTop = 0
-    this.$refs.video.addEventListener('pause', async () => {
-      requestAnimationFrame(async () => {
+    // this.$refs.video.addEventListener('pause', async () => {
+    // })
+  },
+  methods: {
+    async launch() {
+      this.$refs.container.style.display = 'flex'
+      this.$refs.video.load()
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.layer, 0.7, {
+          filter: 'blur(0px)',
+          opacity: 0.9,
+          ease: Expo.easeOut
+        })
         TweenMax.to(this.$refs.video, 1, {
+          scale: 1,
+          opacity: 1,
+          ease: Expo.easeOut,
+          delay: 0.3
+        })
+      })
+      await this.$delay(1000)
+      this.$refs.video.play()
+    },
+    close() {
+      this.$refs.video.pause()
+      requestAnimationFrame(async () => {
+        TweenMax.to(this.$refs.layer, 0.5, {
+          filter: 'blur(50px)',
+          opacity: 0,
+          ease: Expo.easeOut
+        })
+        TweenMax.to(this.$refs.video, 0.7, {
           scale: 0,
           opacity: 0,
           ease: Expo.easeOut
         })
-        await this.$delay(1000)
+        await this.$delay(700)
         this.$refs.container.style.display = 'none'
-      })
-    })
-  },
-  methods: {
-    click() {
-      console.log(this.$refs.video)
-      this.$refs.video.play()
-      this.$refs.container.style.display = 'flex'
-      requestAnimationFrame(() => {
-        TweenMax.to(this.$refs.video, 1, {
-          scale: 1,
-          opacity: 1,
-          ease: Expo.easeOut
-        })
       })
     }
   }
@@ -114,7 +134,16 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fefefe;
+      filter: blur(50px);
+      opacity: 0;
+    }
     video {
       width: 100%;
       height: auto;
