@@ -32,6 +32,7 @@ export default {
   width: 100%;
   color: #555;
   text-align: center;
+  overflow: hidden;
   video {
     margin-top: 50px;
     width: 100%;

@@ -27,6 +27,7 @@ export default {
   width: 100%;
   color: #555;
   text-align: center;
+  overflow: hidden;
   h1 {
     font-family: 'Shadows Into Light', cursive;
     width: 100%;

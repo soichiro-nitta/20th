@@ -31,6 +31,7 @@ export default {
   padding: 60px 20px;
   width: 100%;
   color: #555;
+  overflow: hidden;
   h1 {
     font-family: 'Shadows Into Light', cursive;
     width: 100%;
