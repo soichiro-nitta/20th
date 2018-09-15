@@ -179,8 +179,9 @@ export default {
     font-weight: bold;
     font-weight: normal;
     line-height: 1.2;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
     font-family: 'Shadows Into Light', cursive;
+    opacity: 0.9;
   }
 }
 </style>
