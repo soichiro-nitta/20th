@@ -174,7 +174,7 @@ export default {
   }
   .text {
     margin-top: 100px;
-    color: white;
+    color: #d3e4fc;
     font-size: 80px;
     font-weight: bold;
     font-weight: normal;
