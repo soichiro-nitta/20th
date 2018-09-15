@@ -174,11 +174,11 @@ export default {
   }
   .text {
     margin-top: 100px;
-    color: cyan;
-    font-size: 70px;
+    color: white;
+    font-size: 80px;
     font-weight: bold;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: 1.1;
     mix-blend-mode: difference;
     font-family: 'Shadows Into Light', cursive;
   }
