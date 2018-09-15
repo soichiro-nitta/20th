@@ -46,10 +46,10 @@ export default {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   .bg {
-    // width: 100%;
-    // height: 100%;
-    width: calc(100%- 20px);
-    height: calc(100% - 20px);
+    width: 100%;
+    height: 100%;
+    // width: calc(100%- 20px);
+    // height: calc(100% - 20px);
     overflow: hidden;
     video {
       width: 100%;
