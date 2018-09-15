@@ -23,5 +23,7 @@ export default {
   font-weight: bold;
   line-height: 1;
   text-align: center;
+  color: white;
+  mix-blend-mode: difference;
 }
 </style>

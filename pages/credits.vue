@@ -25,7 +25,7 @@ export default {
 .credits {
   padding: 60px 20px;
   width: 100%;
-  color: #555;
+  color: white;
   text-align: center;
   overflow: hidden;
   h1 {
@@ -53,7 +53,7 @@ export default {
       flex: 1 1 auto;
       height: 1px;
       position: relative;
-      background: #555;
+      background: white;
     }
     &::before {
       margin-right: 15px;

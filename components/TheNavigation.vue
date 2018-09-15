@@ -201,7 +201,7 @@ export default {
     height: 100%;
     a {
       display: block;
-      margin: 30px 0;
+      margin: 35px 0;
       color: #555;
       font-family: 'Shadows Into Light', cursive;
       font-size: 10vw;

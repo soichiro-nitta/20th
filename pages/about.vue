@@ -30,7 +30,6 @@ export default {
 .about {
   padding: 60px 20px;
   width: 100%;
-  color: #555;
   overflow: hidden;
   h1 {
     font-family: 'Shadows Into Light', cursive;
@@ -39,12 +38,15 @@ export default {
     font-weight: bold;
     line-height: 1;
     text-align: center;
+    color: white;
+    mix-blend-mode: difference;
   }
   .text {
     margin-top: 50px;
     font-size: 12px;
-    font-weight: normal;
     line-height: 2;
+    color: white;
+    mix-blend-mode: difference;
   }
 }
 </style>

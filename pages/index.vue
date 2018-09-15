@@ -1,15 +1,5 @@
 <template>
   <div class="index">
-    <video
-      autoplay
-      class="bg"
-      preload="none"
-      muted
-      playsinline
-      loop
-    >
-      <source src="https://media.housecom.jp/wp-content/uploads/videos/koenji.mp4">
-    </video>
     <!-- <video
       crossorigin="anonymous"
       preload="auto"
@@ -121,18 +111,6 @@ export default {
   color: #555;
   text-align: center;
   overflow: hidden;
-  .bg {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
   .launch {
     margin: 50px auto 0;
     width: 60%;
@@ -175,12 +153,12 @@ export default {
   .text {
     margin-top: 100px;
     color: #d3e4fc;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 80px;
     font-weight: bold;
     font-weight: normal;
-    line-height: 1.1;
+    line-height: 1.2;
     mix-blend-mode: difference;
-    font-family: 'Shadows Into Light', cursive;
   }
 }
 </style>
