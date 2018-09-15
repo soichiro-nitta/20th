@@ -179,7 +179,7 @@ export default {
     right: 0;
     bottom: 0;
     left: 10px;
-    margin: 0 auto;
+    margin: 0;
     width: calc(100% - 20px);
     height: calc(100% - 20px);
     background: #fefefe;
@@ -201,7 +201,7 @@ export default {
     height: 100%;
     a {
       display: block;
-      margin: 40px 0;
+      margin: 30px 0;
       color: #555;
       font-family: 'Shadows Into Light', cursive;
       font-size: 10vw;
