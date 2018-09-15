@@ -10,7 +10,6 @@
     >
       <source src="https://media.housecom.jp/wp-content/uploads/videos/koenji.mp4">
     </video>
-    <BaseHeading1 text="Home."/>
     <!-- <video
       crossorigin="anonymous"
       preload="auto"
@@ -33,7 +32,7 @@
       src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4"
       controls
     /> -->
-    <div class="text">OP後はこのページにきて、ボタン押して動画再生?</div>
+    <div class="text">Soichiro / Kensuke</div>
     <div
       ref="container"
       class="container"
@@ -174,11 +173,14 @@ export default {
     }
   }
   .text {
-    margin-top: 50px;
-    color: #555;
-    font-size: 12px;
+    margin-top: 100px;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
     font-weight: normal;
-    line-height: 2;
+    line-height: 1.2;
+    mix-blend-mode: exclusion;
+    font-family: 'Shadows Into Light', cursive;
   }
 }
 </style>
