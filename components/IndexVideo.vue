@@ -21,11 +21,11 @@
       />
       <video
         ref="video"
-        poster="https://media.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
+        poster="https://media-wp.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
         controls
         preload="auto"
       >
-        <source src="https://media.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
+        <source src="https://media-wp.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
       </video>
     </div>
   </div>
