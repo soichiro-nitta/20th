@@ -1,65 +1,81 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        20th-v2
-      </h1>
-      <h2 class="subtitle">
-        My terrific Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+  <div class="index">
+    <div class="table">
+      <div class="tbc">
+        <div class="btn">
+          <IndexVideo/>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import { TweenMax, Expo } from 'gsap'
+import BaseHeading1 from '~/components/BaseHeading1.vue'
+import IndexVideo from '~/components/IndexVideo.vue'
 
 export default {
   components: {
-    Logo
+    BaseHeading1,
+    IndexVideo
+  },
+  async mounted() {
+    document.getElementById('scrollArea').scrollTop = 0
+  },
+  transition: {
+    appear: false,
+    leave(el, done) {
+      requestAnimationFrame(() => {
+        TweenMax.to('#TheOpening', 0.5, {
+          top: '-240px',
+          opacity: 0,
+          ease: Expo.easeIn
+        })
+        TweenMax.to('.btn', 0.5, {
+          y: '-30px',
+          opacity: 0,
+          ease: Expo.easeIn,
+          delay: 0.2,
+          onComplete: () => {
+            done()
+          }
+        })
+      })
+    }
   }
 }
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style lang='scss' scoped>
+.index {
+  padding: 60px 20px;
+  width: 100%;
+  height: 100%;
+  color: #555;
   text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  overflow: hidden;
+  .table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+  .btn {
+    position: relative;
+    margin: 105px auto 0;
+    width: 60%;
+    height: 150px;
+  }
+  .btnED {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .btnOP {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

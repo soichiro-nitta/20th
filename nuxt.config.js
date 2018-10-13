@@ -14,31 +14,42 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Share+Tech|Averia+Serif+Libre|Shadows+Into+Light|M+PLUS+Rounded+1c'
+      }
     ]
   },
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#555',
+    height: '5px'
+  },
 
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/scss/default.scss'],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/mixin'],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    'nuxt-device-detect',
+    [
+      'nuxt-sass-resources-loader',
+      ['~/assets/scss/variable.scss', '~/assets/scss/mixins.scss']
+    ]
   ],
 
   /*
