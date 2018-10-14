@@ -1,4 +1,4 @@
-# 20th-v2
+# 20th
 
 > My terrific Nuxt.js project
 
