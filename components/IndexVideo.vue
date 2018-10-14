@@ -25,7 +25,7 @@
         controls
         preload="auto"
       >
-        <source src="https://media-wp.housecom.jp/wp-content/uploads/videos/180115-koenji.mp4">
+        <source src="https://media-wp.housecom.jp/wp-content/uploads/videos/20th.mp4">
       </video>
     </div>
   </div>
