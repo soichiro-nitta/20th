@@ -27,7 +27,7 @@ export default {
     leave(el, done) {
       requestAnimationFrame(() => {
         TweenMax.to('#TheOpening', 0.5, {
-          top: '-160px',
+          top: '-170px',
           opacity: 0,
           ease: Back.easeIn.config(3)
         })

@@ -66,11 +66,11 @@ export default {
     if (!this.opening) return
     requestAnimationFrame(() => {
       TweenMax.to('#TheOpening', 1, {
-        top: '-110px',
+        top: '-120px',
         opacity: 1,
         ease: Back.easeOut.config(3),
         startAt: {
-          top: '-60px'
+          top: '-70px'
         }
       })
     })
