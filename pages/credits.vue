@@ -198,10 +198,7 @@ export default {
             ease: Back.easeIn.config(3),
             delay: 0.3
           },
-          0.1,
-          () => {
-            done()
-          }
+          0.1
         )
         TweenMax.staggerTo(
           '.link',
