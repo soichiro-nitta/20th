@@ -37,8 +37,9 @@ export default {
       })
     }
     console.log('this is staging')
-    // const progress = document.getElementsByClassName('nuxt-progress')[0]
-    // progress.style.height = this.$device.isMobile ? '10px' : '20px'
+    const progress = document.getElementsByClassName('nuxt-progress')[0]
+    progress.style.height = this.$device.isMobile ? '10px' : '20px'
+    progress.style.opacity = 1
     // const userAgent = window.navigator.userAgent.toLowerCase()
     // if (userAgent.indexOf('msie') !== -1 || userAgent.indexOf('trident') !== -1 || userAgent.indexOf('edge') !== -1) {
     //   this.$router.replace({ path: 'sorry' })
