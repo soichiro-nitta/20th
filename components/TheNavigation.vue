@@ -257,7 +257,7 @@ export default {
     height: 100%;
     a {
       display: block;
-      margin: 40px 0;
+      margin: 42px 0;
       color: #555;
       // font-family: 'Shadows Into Light', cursive;
       font-family: 'Share Tech', cursive;
