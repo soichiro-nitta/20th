@@ -74,6 +74,6 @@ export default {
   padding: 0 15%;
   width: 100%;
   height: auto;
-  background: white;
+  background: #eee;
 }
 </style>
