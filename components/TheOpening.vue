@@ -46,7 +46,7 @@ export default {
       if (this.$route.path === '/') {
         requestAnimationFrame(() => {
           TweenMax.to(this.$refs.theOpening, 1, {
-            scale: 1,
+            scale: 0.8,
             top: '-210px',
             ease: Expo.easeInOut
           })

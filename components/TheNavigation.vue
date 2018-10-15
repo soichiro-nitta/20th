@@ -12,20 +12,20 @@
         to="/"
         @click.native="close"
       >
-        HOME.
+        Home
       </nuxt-link>
       <nuxt-link
         to="/about"
         @click.native="close"
       >
-        ABOUT.
+        About
       </nuxt-link>
 
       <nuxt-link
         to="/credits"
         @click.native="close"
       >
-        CREDITS.
+        Credits
       </nuxt-link>
     </div>
     <div
@@ -259,8 +259,8 @@ export default {
       display: block;
       margin: 45px 0;
       color: #555;
-      font-family: 'Shadows Into Light', cursive;
-      // font-family: 'Share Tech', cursive;
+      // font-family: 'Shadows Into Light', cursive;
+      font-family: 'Share Tech', cursive;
       font-size: 8vw;
       font-weight: bold;
       line-height: 1;
