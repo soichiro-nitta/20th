@@ -62,7 +62,7 @@ export default {
   }
   .btn {
     position: relative;
-    margin: 150px auto 0;
+    margin: 140px auto 0;
     width: 60%;
     height: 150px;
   }
