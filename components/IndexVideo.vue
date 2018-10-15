@@ -44,7 +44,7 @@ export default {
   },
   watch: {
     async opening() {
-      await this.$delay(1200)
+      await this.$delay(1000)
       this.animationOP()
     }
   },

@@ -41,7 +41,7 @@ export default {
         requestAnimationFrame(() => {
           TweenMax.to(this.$refs.theOpening, 1.3, {
             top: '-110px',
-            ease: Back.easeOut.config(4)
+            ease: Back.easeOut.config(5)
           })
         })
       } else {
