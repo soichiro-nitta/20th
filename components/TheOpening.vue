@@ -39,9 +39,9 @@ export default {
       this.opening.removeEventListener('complete', onComplete)
       if (this.$route.path === '/') {
         requestAnimationFrame(() => {
-          TweenMax.to(this.$refs.theOpening, 1.2, {
+          TweenMax.to(this.$refs.theOpening, 1.3, {
             top: '-110px',
-            ease: Back.easeInOut.config(3)
+            ease: Back.easeInOut.config(4)
           })
         })
       } else {
