@@ -42,7 +42,7 @@ export default {
           TweenMax.to(this.$refs.theOpening, 1.2, {
             scale: 1,
             top: '-120px',
-            ease: Back.easeOut.config(7)
+            ease: Back.easeOut.config(5)
           })
         })
       } else {
