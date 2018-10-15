@@ -76,11 +76,13 @@ export default {
   bottom: 0;
   left: 0;
   margin: auto;
-  width: 100%;
-  height: 100%;
   .lottie {
+    // min-width: 100%;
+    // min-height: 100%;
     width: 100%;
     height: 100%;
+    // width: auto;
+    // height: auto;
   }
 }
 </style>

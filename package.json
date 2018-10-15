@@ -4,6 +4,11 @@
   "description": "My terrific Nuxt.js project",
   "author": "soichiro-nitta",
   "private": true,
+  "config": {
+    "nuxt": {
+      "host": "192.168.3.5"
+    }
+  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",

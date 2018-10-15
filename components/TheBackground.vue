@@ -17,7 +17,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-import { TweenMax, Expo } from 'gsap'
+import { TweenMax, Expo, RoughEase } from 'gsap'
 
 export default {
   data() {
@@ -33,9 +33,15 @@ export default {
   watch: {
     loadingComplete() {
       requestAnimationFrame(() => {
-        TweenMax.to(this.$refs.video, 7.5, {
+        TweenMax.to(this.$refs.video, 5, {
           opacity: 1,
-          ease: Expo.easeInOut
+          ease: RoughEase.ease.config({
+            strength: 7,
+            points: 30,
+            taper: 'out',
+            randomize: true,
+            clamp: true
+          })
         })
       })
       this.$refs.video.play()
@@ -285,8 +291,9 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   .bg {
-    width: calc(100%- 10px);
+    width: calc(100% - 10px);
     height: calc(100% - 10px);
     overflow: hidden;
     video {
