@@ -13,7 +13,7 @@
 
 <script>
 import lottie from 'lottie-web'
-import { TweenMax, Expo } from 'gsap'
+import { TweenMax, Back } from 'gsap'
 import { mapGetters, mapMutations } from 'vuex'
 
 export default {
@@ -39,9 +39,9 @@ export default {
       this.opening.removeEventListener('complete', onComplete)
       if (this.$route.path === '/') {
         requestAnimationFrame(() => {
-          TweenMax.to(this.$refs.theOpening, 1, {
+          TweenMax.to(this.$refs.theOpening, 1.2, {
             top: '-110px',
-            ease: Expo.easeInOut
+            ease: Back.easeInOut.config(3)
           })
         })
       } else {
@@ -82,6 +82,7 @@ export default {
     height: auto;
     // width: auto;
     // height: auto;
+    // transform: scale(1.2);
   }
 }
 </style>

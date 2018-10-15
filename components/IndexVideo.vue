@@ -34,7 +34,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import lottie from 'lottie-web'
-import { TweenMax, Expo } from 'gsap'
+import { TweenMax, Back } from 'gsap'
 
 export default {
   computed: {
@@ -44,7 +44,7 @@ export default {
   },
   watch: {
     async opening() {
-      await this.$delay(750)
+      await this.$delay(300)
       this.animationOP()
     }
   },
@@ -68,13 +68,13 @@ export default {
       TweenMax.to('#TheOpening', 1, {
         top: '-110px',
         opacity: 1,
-        ease: Expo.easeOut,
+        ease: Back.easeOut.config(3),
         startAt: {
-          top: '-140px'
+          top: '-60px'
         }
       })
     })
-    await this.$delay(400)
+    await this.$delay(200)
     this.animationOP()
   },
   methods: {

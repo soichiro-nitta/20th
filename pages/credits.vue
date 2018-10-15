@@ -17,7 +17,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { TweenMax, Expo } from 'gsap'
 import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
@@ -46,9 +45,9 @@ export default {
         TweenMax.to('.heading', 0.8, {
           y: 0,
           opacity: 1,
-          ease: Expo.easeOut,
+          ease: Back.easeOut.config(3),
           startAt: {
-            y: '30px'
+            y: '50px'
           }
         })
         TweenMax.staggerTo(
@@ -57,10 +56,10 @@ export default {
           {
             y: 0,
             opacity: 1,
-            ease: Expo.easeOut,
+            ease: Back.easeOut.config(3),
             delay: 0.1,
             startAt: {
-              y: '30px'
+              y: '50px'
             }
           },
           0.1
@@ -71,10 +70,10 @@ export default {
           {
             y: 0,
             opacity: 1,
-            ease: Expo.easeOut,
+            ease: Back.easeOut.config(3),
             delay: 0.3,
             startAt: {
-              y: '30px'
+              y: '50px'
             }
           },
           0.1
@@ -87,17 +86,17 @@ export default {
     leave(el, done) {
       requestAnimationFrame(() => {
         TweenMax.to('.heading', 0.5, {
-          y: '-40px',
+          y: '-50px',
           opacity: 0,
-          ease: Expo.easeIn
+          ease: Back.easeIn.config(3)
         })
         TweenMax.staggerTo(
           'h2',
           0.5,
           {
-            y: '-30px',
+            y: '-50px',
             opacity: 0,
-            ease: Expo.easeIn,
+            ease: Back.easeIn.config(3),
             delay: 0.1
           },
           0.1
@@ -106,9 +105,9 @@ export default {
           '.name',
           0.5,
           {
-            y: '-30px',
+            y: '-50px',
             opacity: 0,
-            ease: Expo.easeIn,
+            ease: Back.easeIn.config(3),
             delay: 0.3
           },
           0.1,

@@ -18,7 +18,6 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { TweenMax, Expo } from 'gsap'
 import BaseHeading1 from '~/components/BaseHeading1.vue'
 
 export default {
@@ -46,14 +45,14 @@ export default {
     leave(el, done) {
       requestAnimationFrame(() => {
         TweenMax.to('.heading', 0.5, {
-          y: '-30px',
+          y: '-50px',
           opacity: 0,
-          ease: Expo.easeIn
+          ease: Back.easeIn.config(3)
         })
         TweenMax.to('.text', 0.5, {
-          y: '-30px',
+          y: '-50px',
           opacity: 0,
-          ease: Expo.easeIn,
+          ease: Back.easeIn.config(3),
           delay: 0.2,
           onComplete: () => {
             done()
@@ -68,18 +67,18 @@ export default {
         TweenMax.to('.heading', 1, {
           y: 0,
           opacity: 1,
-          ease: Expo.easeOut,
+          ease: Back.easeOut.config(3),
           startAt: {
-            y: '30px'
+            y: '50px'
           }
         })
         TweenMax.to('.text', 1, {
           y: 0,
           opacity: 1,
-          ease: Expo.easeOut,
+          ease: Back.easeOut.config(3),
           delay: 0.2,
           startAt: {
-            y: '30px'
+            y: '50px'
           }
         })
       })

@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import { TweenMax, Expo } from 'gsap'
 import BaseHeading1 from '~/components/BaseHeading1.vue'
 import IndexVideo from '~/components/IndexVideo.vue'
 
@@ -20,7 +19,7 @@ export default {
     BaseHeading1,
     IndexVideo
   },
-  async mounted() {
+  mounted() {
     document.getElementById('scrollArea').scrollTop = 0
   },
   transition: {
@@ -28,14 +27,14 @@ export default {
     leave(el, done) {
       requestAnimationFrame(() => {
         TweenMax.to('#TheOpening', 0.5, {
-          top: '-240px',
+          top: '-160px',
           opacity: 0,
-          ease: Expo.easeIn
+          ease: Back.easeIn.config(3)
         })
         TweenMax.to('.btn', 0.5, {
-          y: '-30px',
+          y: '-50px',
           opacity: 0,
-          ease: Expo.easeIn,
+          ease: Back.easeIn.config(3),
           delay: 0.2,
           onComplete: () => {
             done()
