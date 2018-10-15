@@ -6,12 +6,86 @@
     />
     <h2>Movie</h2>
     <div class="name">Kensuke Ohki</div>
+    <div class="link">
+      <a
+        href="https://www.facebook.com/kensuke.oki.50"
+        target="_blank"
+      >
+        <img src="/svg/fb.svg">
+      </a>
+      <a
+        href="https://twitter.com/ken78twi"
+        target="_blank"
+      >
+        <img src="/svg/tw.svg">
+      </a>
+    </div>
     <h2>Website</h2>
     <div class="name">Soichiro Nitta</div>
+    <div class="link">
+      <a
+        href="https://www.facebook.com/nitta.1226"
+        target="_blank"
+      >
+        <img src="/svg/fb.svg">
+      </a>
+      <a
+        href="https://twitter.com/soichiro_nitta"
+        target="_blank"
+      >
+        <img src="/svg/tw.svg">
+      </a>
+      <a
+        href="https://nitta.studio"
+        target="_blank"
+      >
+        <img src="/svg/hp.svg">
+      </a>
+    </div>
     <h2>Produce</h2>
     <div class="name">Leading & Company Inc.</div>
+    <div class="link">
+      <a
+        href="https://www.facebook.com/15ahead"
+        target="_blank"
+      >
+        <img src="/svg/fb.svg">
+      </a>
+      <a
+        href="https://twitter.com/4chikara"
+        target="_blank"
+      >
+        <img src="/svg/tw.svg">
+      </a>
+      <a
+        href="https://lrandcom.com"
+        target="_blank"
+      >
+        <img src="/svg/hp.svg">
+      </a>
+    </div>
     <h2>20th Anniversary</h2>
     <div class="name">Housecom Inc.</div>
+    <div class="link">
+      <a
+        href="https://www.facebook.com/housecom.co.jp"
+        target="_blank"
+      >
+        <img src="/svg/fb.svg">
+      </a>
+      <a
+        href="https://twitter.com/housecom_jp"
+        target="_blank"
+      >
+        <img src="/svg/tw.svg">
+      </a>
+      <a
+        href="https://www.housecom.co.jp"
+        target="_blank"
+      >
+        <img src="/svg/hp.svg">
+      </a>
+    </div>
   </div>
 </template>
 
@@ -78,6 +152,20 @@ export default {
           },
           0.1
         )
+        TweenMax.staggerTo(
+          '.link',
+          0.8,
+          {
+            y: 0,
+            opacity: 1,
+            ease: Back.easeOut.config(3),
+            delay: 0.5,
+            startAt: {
+              y: '50px'
+            }
+          },
+          0.1
+        )
       })
     }
   },
@@ -109,6 +197,20 @@ export default {
             opacity: 0,
             ease: Back.easeIn.config(3),
             delay: 0.3
+          },
+          0.1,
+          () => {
+            done()
+          }
+        )
+        TweenMax.staggerTo(
+          '.link',
+          0.5,
+          {
+            y: '-50px',
+            opacity: 0,
+            ease: Back.easeIn.config(3),
+            delay: 0.5
           },
           0.1,
           () => {
@@ -165,6 +267,19 @@ export default {
     font-family: 'Share Tech', cursive;
     font-weight: bold;
     opacity: 0;
+  }
+  .link {
+    margin-top: 20px;
+    opacity: 0;
+    a {
+      display: inline-block;
+      margin: 0 10px;
+      height: 12px;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 }
 </style>
