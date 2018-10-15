@@ -20,6 +20,7 @@
         @touchstart="closeVideo"
       />
       <video
+        v-if="video"
         ref="video"
         poster="https://media-wp.housecom.jp/wp-content/uploads/2018/01/26942352_796053807253941_538403009_o-1080x459.jpg"
         controls
@@ -37,6 +38,11 @@ import lottie from 'lottie-web'
 import { TweenMax, Back } from 'gsap'
 
 export default {
+  data() {
+    return {
+      video: false
+    }
+  },
   computed: {
     ...mapGetters({
       opening: 'opening'
@@ -79,6 +85,7 @@ export default {
   },
   methods: {
     async openVideo() {
+      this.video = true
       this.animationED()
       await this.$delay(750)
       this.$refs.container.style.display = 'flex'
@@ -115,6 +122,7 @@ export default {
       })
       await this.$delay(500)
       this.animationOP()
+      this.video = false
     },
     animationOP() {
       this.$refs.btnED.style.display = 'none'
