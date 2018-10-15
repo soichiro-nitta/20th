@@ -17,7 +17,7 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-// import { TweenMax, Elastic } from 'gsap'
+import { TweenMax, Expo } from 'gsap'
 
 export default {
   data() {
@@ -32,6 +32,12 @@ export default {
   },
   watch: {
     loadingComplete() {
+      requestAnimationFrame(() => {
+        TweenMax.to(this.$refs.video, 7.5, {
+          opacity: 1,
+          ease: Expo.easeInOut
+        })
+      })
       this.$refs.video.play()
     }
   },
@@ -280,8 +286,6 @@ export default {
   width: 100%;
   height: 100%;
   .bg {
-    // width: 100%;
-    // height: 100%;
     width: calc(100%- 10px);
     height: calc(100% - 10px);
     overflow: hidden;
@@ -289,6 +293,7 @@ export default {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      opacity: 0;
     }
   }
   canvas {

@@ -25,12 +25,6 @@ export default {
   watch: {
     loadingComplete() {
       this.opening.play()
-      requestAnimationFrame(() => {
-        TweenMax.to(this.$refs.theOpening, 5, {
-          scale: 1,
-          ease: Expo.easeInOut
-        })
-      })
     }
   },
   mounted() {
@@ -61,7 +55,7 @@ export default {
       }
       this.setOpening()
     }
-    // this.opening.addEventListener('complete', onComplete)
+    this.opening.addEventListener('complete', onComplete)
   },
   methods: {
     ...mapMutations({
@@ -85,11 +79,8 @@ export default {
   width: 100%;
   height: 100%;
   .lottie {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    // width: auto;
-    // height: auto;
+    width: auto;
+    height: auto;
   }
 }
 </style>
