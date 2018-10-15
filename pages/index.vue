@@ -62,20 +62,9 @@ export default {
   }
   .btn {
     position: relative;
-    margin: 105px auto 0;
+    margin: 150px auto 0;
     width: 60%;
     height: 150px;
-  }
-  .btnED {
-    display: none;
-    width: 100%;
-    height: 100%;
-  }
-  .btnOP {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
   }
 }
 </style>

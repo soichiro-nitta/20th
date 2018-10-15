@@ -40,8 +40,7 @@ export default {
       if (this.$route.path === '/') {
         requestAnimationFrame(() => {
           TweenMax.to(this.$refs.theOpening, 1, {
-            scale: 0.7,
-            top: '-210px',
+            top: '-100px',
             ease: Expo.easeInOut
           })
         })
@@ -79,8 +78,8 @@ export default {
   .lottie {
     // min-width: 100%;
     // min-height: 100%;
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: auto;
     // width: auto;
     // height: auto;
   }
