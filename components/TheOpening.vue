@@ -77,7 +77,7 @@ export default {
   bottom: 0;
   left: 0;
   margin: auto;
-  transform: scale(1.5);
+  transform: scale(1.4);
   .lottie {
     // min-width: 100%;
     // min-height: 100%;

@@ -44,6 +44,9 @@ export default {
   mounted() {
     const canplay = () => {
       this.$refs.video.removeEventListener('canplay', canplay)
+      const duration = this.$refs.video.duration // 動画の尺
+      const rand = Math.floor(Math.random() * (duration + 1 - 0)) // 0 ~ durationの乱数
+      this.$refs.video.currentTime = rand // 再生開始時間を指定
       this.setCanplayBG()
     }
     this.$refs.video.addEventListener('canplay', canplay)
