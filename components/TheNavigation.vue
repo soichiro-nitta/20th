@@ -79,7 +79,7 @@ export default {
   },
   watch: {
     async opening() {
-      await this.$delay(1800)
+      await this.$delay(2000)
       requestAnimationFrame(() => {
         TweenMax.to(this.$refs.switchDummy3, 0.5, {
           scale: 1,
