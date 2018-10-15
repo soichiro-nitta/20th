@@ -17,8 +17,8 @@ export default {
 
 <style scoped>
 .BaseHeading1 {
-  font-family: 'Shadows Into Light', cursive;
-  /* font-family: 'Share Tech', cursive; */
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Share Tech', cursive;
   width: 100%;
   font-size: 40px;
   font-weight: bold;

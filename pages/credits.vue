@@ -1,7 +1,7 @@
 <template>
   <div class="credits">
     <BaseHeading1
-      text="CREDITS."
+      text="Credits"
       class="heading"
     />
     <h2>Movie</h2>
@@ -141,8 +141,7 @@ export default {
     position: relative;
     margin-top: 57px;
     font-size: 14px;
-    // font-family: 'Share Tech', cursive;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Share Tech', cursive;
     font-weight: bold;
     opacity: 0;
     &::before,
@@ -164,8 +163,7 @@ export default {
   .name {
     margin-top: 60px;
     font-size: 18px;
-    // font-family: 'Share Tech', cursive;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Share Tech', cursive;
     font-weight: bold;
     opacity: 0;
   }
