@@ -61,7 +61,7 @@ export default {
       }
       this.setOpening()
     }
-    this.opening.addEventListener('complete', onComplete)
+    // this.opening.addEventListener('complete', onComplete)
   },
   methods: {
     ...mapMutations({
@@ -85,10 +85,11 @@ export default {
   width: 100%;
   height: 100%;
   .lottie {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // width: auto;
+    // height: auto;
   }
 }
 </style>
