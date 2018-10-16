@@ -167,10 +167,6 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    @include pc {
-      left: 320px;
-      width: calc(100% - 330px);
-    }
     .layer {
       position: absolute;
       top: 0;
@@ -192,7 +188,7 @@ export default {
       height: auto;
       opacity: 0;
       @include pc {
-        width: 80%;
+        width: 65%;
       }
     }
   }

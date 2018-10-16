@@ -8,7 +8,7 @@
         playsinline
         loop
       >
-        <source src="https://media-wp.housecom.jp/wp-content/uploads/videos/20th-mobile.mp4">
+        <source :src="src">
       </video>
     </div>
     <canvas id="canvas"/>
@@ -26,6 +26,11 @@ export default {
     }
   },
   computed: {
+    src() {
+      return `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
+        this.isMobile ? 'mobile' : 'pc'
+      }.mp4`
+    },
     ...mapGetters({
       loadingComplete: 'loadingComplete'
     })

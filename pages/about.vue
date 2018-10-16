@@ -81,6 +81,25 @@ export default {
         })
       })
     }
+  },
+  head() {
+    return {
+      title: 'About',
+      meta: [
+        {
+          property: 'og:title',
+          content: 'About | Housecom 20th🎉'
+        },
+        {
+          property: 'og:url',
+          content: 'https://20th.netlify.com/about'
+        },
+        {
+          property: 'twitter:title',
+          content: 'About | Housecom 20th🎉'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -90,6 +109,10 @@ export default {
   padding: 60px 20px;
   width: 100%;
   overflow: hidden;
+  @include pc {
+    margin: 0 auto;
+    width: 600px;
+  }
   .heading {
     opacity: 0;
   }

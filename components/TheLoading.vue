@@ -75,5 +75,8 @@ export default {
   width: 100%;
   height: auto;
   background: #eee;
+  @include pc {
+    width: 75%;
+  }
 }
 </style>

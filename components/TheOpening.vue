@@ -85,6 +85,9 @@ export default {
     height: auto;
     // width: auto;
     // height: auto;
+    @include pc {
+      width: 500px;
+    }
   }
 }
 </style>

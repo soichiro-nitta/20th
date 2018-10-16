@@ -83,6 +83,10 @@ export default {
     margin: 140px auto 0;
     width: 60%;
     height: 150px;
+    @include pc {
+      margin: 210px auto 0;
+      width: 250px;
+    }
   }
 }
 </style>

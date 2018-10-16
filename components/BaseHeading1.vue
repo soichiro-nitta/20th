@@ -15,9 +15,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .BaseHeading1 {
-  /* font-family: 'Shadows Into Light', cursive; */
   font-family: 'Share Tech', cursive;
   width: 100%;
   font-size: 40px;
@@ -25,5 +24,8 @@ export default {
   line-height: 1;
   text-align: center;
   color: white;
+  @include pc {
+    font-size: 55px;
+  }
 }
 </style>

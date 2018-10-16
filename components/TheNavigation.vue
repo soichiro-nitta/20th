@@ -267,6 +267,9 @@ export default {
       transform: translateX(-60px);
       filter: blur(50px);
       opacity: 0;
+      @include pc {
+        font-size: 3vw;
+      }
     }
   }
   .switchDummy3 {
@@ -292,6 +295,10 @@ export default {
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
+    @include pc {
+      top: 30px;
+      right: 30px;
+    }
     .border1,
     .border2,
     .border3 {

@@ -216,6 +216,25 @@ export default {
         )
       })
     }
+  },
+  head() {
+    return {
+      title: 'Credits',
+      meta: [
+        {
+          property: 'og:title',
+          content: 'Credits | Housecom 20th🎉'
+        },
+        {
+          property: 'og:url',
+          content: 'https://20th.netlify.com/credits'
+        },
+        {
+          property: 'twitter:title',
+          content: 'Credits | Housecom 20th🎉'
+        }
+      ]
+    }
   }
 }
 </script>
@@ -227,6 +246,10 @@ export default {
   color: white;
   text-align: center;
   overflow: hidden;
+  @include pc {
+    margin: 0 auto;
+    width: 600px;
+  }
   .heading {
     opacity: 0;
   }
