@@ -85,6 +85,7 @@ export default {
   },
   methods: {
     async openVideo() {
+      if (!this.opening) return
       this.video = true
       this.animationED()
       await this.$delay(750)
