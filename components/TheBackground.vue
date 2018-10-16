@@ -47,6 +47,7 @@ export default {
     }
   },
   mounted() {
+    console.log(`isMobile: ${this.isMobile}`)
     const canplay = () => {
       this.$refs.video.removeEventListener('canplay', canplay)
       const duration = this.$refs.video.duration // 動画の尺
