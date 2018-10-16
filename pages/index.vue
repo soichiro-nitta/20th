@@ -42,6 +42,25 @@ export default {
         })
       })
     }
+  },
+  head() {
+    return {
+      title: 'Home',
+      meta: [
+        {
+          property: 'og:title',
+          content: 'Home | Housecom 20th🎉'
+        },
+        {
+          property: 'og:url',
+          content: 'https://20th.netlify.com/'
+        },
+        {
+          property: 'twitter:title',
+          content: 'Home | Housecom 20th🎉'
+        }
+      ]
+    }
   }
 }
 </script>

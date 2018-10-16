@@ -30,12 +30,12 @@ export default {
     })
   },
   mounted() {
-    if (!this.$device.isMobile) {
-      this.$nuxt.error({
-        statusCode: 777,
-        message: 'Desktop is not implemented yet'
-      })
-    }
+    // if (!this.$device.isMobile) {
+    //   this.$nuxt.error({
+    //     statusCode: 777,
+    //     message: 'Desktop is not implemented yet'
+    //   })
+    // }
     console.log('this is staging')
     // const progress = document.getElementsByClassName('nuxt-progress')[0]
     // progress.style.height = this.$device.isMobile ? '10px' : '20px'

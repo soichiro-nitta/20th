@@ -1,5 +1,3 @@
-const pkg = require('./package')
-
 module.exports = {
   mode: 'universal',
 
@@ -7,18 +5,34 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    titleTemplate: '%s | Housecom 20th🎉',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'keywords', content: 'Housecom 20th,ハウスコム,20周年' },
+      { property: 'fb:app_id', content: '358720951531764' },
+      { property: 'og:description', content: '' },
+      {
+        property: 'og:image',
+        content: 'https://media-wp.housecom.jp/static/20th/ogp.png'
+      },
+      { property: 'og:site_name', content: 'Housecom 20th🎉' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:site', content: '@soichiro_nitta' },
+      { property: 'twitter:creator', content: '@soichiro_nitta' },
+      { property: 'twitter:description', content: '' },
+      {
+        property: 'twitter:image',
+        content: 'https://media-wp.housecom.jp/static/20th/ogp.png'
+      }
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css?family=Share+Tech|Averia+Serif+Libre|Shadows+Into+Light|M+PLUS+Rounded+1c'
+          'https://fonts.googleapis.com/css?family=Share+Tech|M+PLUS+Rounded+1c'
       }
     ]
   },
