@@ -28,7 +28,7 @@ export default {
   computed: {
     src() {
       return `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
-        this.isMobile ? 'mobile' : 'pc'
+        this.$device.isMobile ? 'mobile' : 'pc'
       }.mp4`
     },
     ...mapGetters({
@@ -47,7 +47,6 @@ export default {
     }
   },
   mounted() {
-    console.log(`isMobile: ${this.isMobile}`)
     const canplay = () => {
       this.$refs.video.removeEventListener('canplay', canplay)
       const duration = this.$refs.video.duration // 動画の尺
