@@ -8,7 +8,11 @@ module.exports = {
     titleTemplate: '%s | Housecom 20th🎉',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        name: 'viewport',
+        content:
+          'width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,shrink-to-fit=no'
+      },
       { hid: 'description', name: 'description', content: '' },
       { name: 'keywords', content: 'Housecom 20th,ハウスコム,20周年' },
       { property: 'fb:app_id', content: '358720951531764' },
