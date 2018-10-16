@@ -22,15 +22,11 @@ import { TweenMax, Expo } from 'gsap'
 export default {
   data() {
     return {
-      isMobile: this.$device.isMobile
+      isMobile: this.$device.isMobile,
+      src: ''
     }
   },
   computed: {
-    src() {
-      return `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
-        this.$device.isMobile ? 'mobile' : 'pc'
-      }.mp4`
-    },
     ...mapGetters({
       loadingComplete: 'loadingComplete'
     })
@@ -47,6 +43,9 @@ export default {
     }
   },
   mounted() {
+    this.src = `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
+      this.isMobile ? 'mobile' : 'pc'
+    }.mp4`
     const canplay = () => {
       this.$refs.video.removeEventListener('canplay', canplay)
       const duration = this.$refs.video.duration // 動画の尺
