@@ -3,7 +3,6 @@
     <div class="bg">
       <video
         ref="video"
-        preload="none"
         muted
         playsinline
         loop
