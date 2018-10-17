@@ -36,6 +36,7 @@ export default {
   // }
   // },
   mounted() {
+    this.setLoadingMounted()
     this.animation = lottie.loadAnimation({
       container: this.$refs.loading,
       renderer: 'svg',
@@ -57,7 +58,8 @@ export default {
   },
   methods: {
     ...mapMutations({
-      setLoadingComplete: 'setLoadingComplete'
+      setLoadingComplete: 'setLoadingComplete',
+      setLoadingMounted: 'setLoadingMounted'
     })
   }
 }

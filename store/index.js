@@ -1,13 +1,15 @@
 export const state = () => ({
   opening: false,
   canplayBG: false,
-  loadingComplete: false
+  loadingComplete: false,
+  loadingMounted: false
 })
 
 export const getters = {
   opening: state => state.opening,
   canplayBG: state => state.canplayBG,
-  loadingComplete: state => state.loadingComplete
+  loadingComplete: state => state.loadingComplete,
+  loadingMounted: state => state.loadingMounted
 }
 
 export const mutations = {
@@ -19,6 +21,9 @@ export const mutations = {
   },
   setLoadingComplete(state) {
     state.loadingComplete = true
+  },
+  setLoadingMounted(state) {
+    state.loadingMounted = true
   }
 }
 

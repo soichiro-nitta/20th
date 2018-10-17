@@ -96,5 +96,14 @@ module.exports = {
         })
       }
     }
+  },
+
+  /*
+  ** Generate configuration
+  */
+  generate: {
+    minify: {
+      collapseWhitespace: false
+    }
   }
 }

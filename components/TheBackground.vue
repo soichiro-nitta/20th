@@ -1,5 +1,8 @@
 <template>
-  <div class="TheBackground">
+  <div
+    v-if="loadingMounted"
+    class="TheBackground"
+  >
     <div class="bg">
       <video
         ref="video"
@@ -29,10 +32,26 @@ export default {
   },
   computed: {
     ...mapGetters({
-      loadingComplete: 'loadingComplete'
+      loadingComplete: 'loadingComplete',
+      loadingMounted: 'loadingMounted'
     })
   },
   watch: {
+    loadingMounted() {
+      this.$nextTick(() => {
+        this.$refs.video.load()
+        const canplay = () => {
+          console.log('canplay')
+          this.$refs.video.removeEventListener('canplay', canplay)
+          const duration = this.$refs.video.duration // 動画の尺
+          const rand = Math.floor(Math.random() * (duration + 1 - 0)) // 0 ~ durationの乱数
+          this.$refs.video.currentTime = rand // 再生開始時間を指定
+          this.setCanplayBG()
+        }
+        this.$refs.video.addEventListener('canplay', canplay)
+        this.canvasAnimation()
+      })
+    },
     loadingComplete() {
       requestAnimationFrame(() => {
         TweenMax.to(this.$refs.video, 8.5, {
@@ -44,19 +63,7 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      this.$refs.video.load()
-      const canplay = () => {
-        console.log('canplay')
-        this.$refs.video.removeEventListener('canplay', canplay)
-        const duration = this.$refs.video.duration // 動画の尺
-        const rand = Math.floor(Math.random() * (duration + 1 - 0)) // 0 ~ durationの乱数
-        this.$refs.video.currentTime = rand // 再生開始時間を指定
-        this.setCanplayBG()
-      }
-      this.$refs.video.addEventListener('canplay', canplay)
-    })
-    this.canvasAnimation()
+    this.mount = true
   },
   methods: {
     ...mapMutations({
