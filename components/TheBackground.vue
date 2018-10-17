@@ -3,12 +3,12 @@
     <div class="bg">
       <video
         ref="video"
+        :src="src"
+        preload="none"
         muted
         playsinline
         loop
-      >
-        <source :src="src">
-      </video>
+      />
     </div>
     <canvas id="canvas"/>
   </div>
@@ -22,7 +22,9 @@ export default {
   data() {
     return {
       isMobile: this.$device.isMobile,
-      src: ''
+      src: `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
+        this.$device.isMobile ? 'mobile' : 'pc'
+      }.mp4`
     }
   },
   computed: {
@@ -42,18 +44,18 @@ export default {
     }
   },
   mounted() {
-    this.src = `https://media-wp.housecom.jp/wp-content/uploads/videos/20th-${
-      this.isMobile ? 'mobile' : 'pc'
-    }.mp4`
-    const canplay = () => {
-      this.$refs.video.removeEventListener('canplay', canplay)
-      const duration = this.$refs.video.duration // 動画の尺
-      const rand = Math.floor(Math.random() * (duration + 1 - 0)) // 0 ~ durationの乱数
-      this.$refs.video.currentTime = rand // 再生開始時間を指定
-      this.setCanplayBG()
-    }
-    this.$refs.video.addEventListener('canplay', canplay)
-    this.$refs.video.load()
+    this.$nextTick(() => {
+      this.$refs.video.load()
+      const canplay = () => {
+        console.log('canplay')
+        this.$refs.video.removeEventListener('canplay', canplay)
+        const duration = this.$refs.video.duration // 動画の尺
+        const rand = Math.floor(Math.random() * (duration + 1 - 0)) // 0 ~ durationの乱数
+        this.$refs.video.currentTime = rand // 再生開始時間を指定
+        this.setCanplayBG()
+      }
+      this.$refs.video.addEventListener('canplay', canplay)
+    })
     this.canvasAnimation()
   },
   methods: {
