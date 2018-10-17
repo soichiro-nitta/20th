@@ -25,7 +25,7 @@ export default {
   text-align: center;
   color: white;
   @include pc {
-    font-size: 55px;
+    font-size: 60px;
   }
 }
 </style>

@@ -268,6 +268,7 @@ export default {
       filter: blur(50px);
       opacity: 0;
       @include pc {
+        margin: 57px 0;
         font-size: 3.5vw;
       }
     }

@@ -247,8 +247,9 @@ export default {
   text-align: center;
   overflow: hidden;
   @include pc {
+    padding: 100px 0;
     margin: 0 auto;
-    width: 600px;
+    width: 650px;
   }
   .heading {
     opacity: 0;
@@ -260,11 +261,15 @@ export default {
     align-content: center;
     flex: 1 1 auto;
     position: relative;
-    margin-top: 57px;
+    margin-top: 60px;
     font-size: 14px;
     font-family: 'Share Tech', cursive;
     font-weight: bold;
     opacity: 0;
+    @include pc {
+      margin-top: 100px;
+      font-size: 18px;
+    }
     &::before,
     &::after {
       content: '';
@@ -287,14 +292,25 @@ export default {
     font-family: 'Share Tech', cursive;
     font-weight: bold;
     opacity: 0;
+    @include pc {
+      margin-top: 100px;
+      font-size: 23px;
+    }
   }
   .link {
     margin-top: 20px;
     opacity: 0;
+    @include pc {
+      margin-top: 50px;
+    }
     a {
       display: inline-block;
       margin: 0 10px;
       height: 12px;
+      @include pc {
+        margin: 0 20px;
+        height: 16px;
+      }
       img {
         width: auto;
         height: 100%;

@@ -120,8 +120,9 @@ export default {
   width: 100%;
   overflow: hidden;
   @include pc {
+    padding: 100px 0;
     margin: 0 auto;
-    width: 600px;
+    width: 650px;
   }
   .heading {
     opacity: 0;
@@ -132,6 +133,10 @@ export default {
     line-height: 2;
     color: white;
     opacity: 0;
+    @include pc {
+      margin-top: 95px;
+      font-size: 14px;
+    }
   }
 }
 </style>
