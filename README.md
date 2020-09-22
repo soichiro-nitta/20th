@@ -1,6 +1,6 @@
 # 20th.netlify.app
 
-> My terrific Nuxt.js project
+https://20th.netlify.app/
 
 ## Build Setup
 
